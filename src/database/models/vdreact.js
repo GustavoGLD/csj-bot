@@ -17,8 +17,8 @@ const videoreaction_schema = new db.Schema({
 
 const videoreaction = db.model('videoreaction', videoreaction_schema);
 
-const vdr_events = db.model('vdr_events', vdr_events_schema);
+const vdr_events_model = db.model('vdr_events', vdr_events_schema);
 
-module.exports = videoreaction;
-exports.vdreaction = videoreaction;
-exports.vdr_events = vdr_events;
+exports.vdr_model = videoreaction;
+exports.vdr_events_model = vdr_events_model;
+

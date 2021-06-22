@@ -3,7 +3,7 @@
  * bot mandar enviar mensagem de elogio quando um vídeo for postado no chat #videos-novos
  */
 
- const videoreaction = require("../database/models/vdreact");
+ const {vdr_model} = require("../database/models/vdreact");
 
  module.exports = {
     name: "viewvdreacts",
@@ -15,7 +15,7 @@
 
     execute(client, message, args) {
 
-        videoreaction.find(function (err, reactions) {
+        vdr_model.find(function (err, reactions) {
             if (err) return console.error($`viewvideoreactions: mongoose:{err}`);
 
             let all_reactions_text = "```c\n";

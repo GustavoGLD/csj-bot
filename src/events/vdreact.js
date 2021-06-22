@@ -1,21 +1,20 @@
 const logger = require("wax-logger");
 const handler = require('wax-command-handler');
-const vdreaction = require("../database/models/vdreact");
+const  vdreaction  = require("../database/models/vdreact.js");
+//const {vdr_events} = require("../database/ready/vdreact.js");
 
-//futuramente serão levados para o db vdr_events
-let count = 0;
-const chatID = "856658304348454913";
-//
 
 module.exports = async (message) => {
+    /*
     vdreaction.find(async function(err, reactions) {
-        if (err) return console.error($`viewvideoreactions: mongoose:{err}`);
+        if (err) return console.error(`viewvideoreactions: ${err}`);
 
         //por enquanto não reage a bot, mas tem que reagir à lorita!!!
-        if (message.channel.id == chatID && !message.author.bot)
-            message.channel.send(reactions[count++].reaction);
+        if (message.channel.id == vdr_events.chatID && !message.author.bot)
+            message.channel.send(reactions[vdr_events.count++].reaction);
 
-        if (count >= reactions.length)
-            count = 0;
+        if (vdr_events.count >= reactions.length)
+            vdr_events.count = 0;
     });
+    */
 }
